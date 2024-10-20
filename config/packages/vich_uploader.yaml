@@ -1,0 +1,18 @@
+vich_uploader:
+    db_driver: orm
+    
+    metadata:
+        type: attribute
+    
+    #permet de stocker les images sur le site dans le sous dossier images/visites    
+    mappings:
+        visites:
+            uri_prefix: /images/visites
+            upload_destination: '%kernel.project_dir%/public/images/visites'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+    #mappings:
+    #    products:
+    #        uri_prefix: /images/products
+    #        upload_destination: '%kernel.project_dir%/public/images/products'
+    #        namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
